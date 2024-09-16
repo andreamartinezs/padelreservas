@@ -158,8 +158,8 @@ if selected == "Clases":
         parsed_time2 = dt.datetime.strptime(end_hours, "%H:%M").time()
         hours2 = parsed_time2.hour
         minutes2= parsed_time2.minute
-        start_time= dt.datetime(fechaclase.year, fechaclase.month, fechaclase.day, hours1-4, minutes1).astimezone(dt.timezone.utc).strftime('%Y-%m-%dT%H:%M:%S')
-        end_time= dt.datetime(fechaclase.year, fechaclase.month, fechaclase.day, hours2-4, minutes2).astimezone(dt.timezone.utc).strftime('%Y-%m-%dT%H:%M:%S')
+        start_time= dt.datetime(fechaclase.year, fechaclase.month, fechaclase.day, hours1, minutes1).astimezone(dt.timezone.utc).strftime('%Y-%m-%dT%H:%M:%S')
+        end_time= dt.datetime(fechaclase.year, fechaclase.month, fechaclase.day, hours2, minutes2).astimezone(dt.timezone.utc).strftime('%Y-%m-%dT%H:%M:%S')
         calendar= GoogleCalendar(credentials, id)
         calendar.create_event(nombreclase,start_time,end_time,time_zone)
         #Crear registro en google sheet
