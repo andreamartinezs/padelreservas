@@ -1,0 +1,7 @@
+streamlit
+streamlit-option-menu
+google-api-python-client
+google-auth
+gspread
+pytz
+numpy
